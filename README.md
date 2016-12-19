@@ -1,0 +1,2 @@
+# AVCaputureMovieFileOutputSample
+AVFoundation(AVCaputureMovieFileOutput)を使用したビデオ録画のサンプル
