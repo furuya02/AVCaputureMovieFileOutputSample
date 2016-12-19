@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AVCaputureMovieFileOutputSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMU-oY-KjQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-oj-Oz4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="KGG-uy-xbA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v37-wu-APP">
+                                <rect key="frame" x="0.0" y="586" width="375" height="81"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umz-aC-W7R">
+                                        <rect key="frame" x="165" y="18" width="45" height="45"/>
+                                        <state key="normal" image="stopButton"/>
+                                        <connections>
+                                            <action selector="tapStartStopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kwz-Wu-sqC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="umz-aC-W7R" firstAttribute="centerX" secondItem="v37-wu-APP" secondAttribute="centerX" id="6MT-xx-BTa"/>
+                                    <constraint firstAttribute="height" constant="81" id="7Tp-uz-EUW"/>
+                                    <constraint firstItem="umz-aC-W7R" firstAttribute="centerY" secondItem="v37-wu-APP" secondAttribute="centerY" id="mHe-lt-Jba"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XNI-oj-Oz4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="66f-Rb-bEz"/>
+                            <constraint firstItem="RMU-oY-KjQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NLP-XM-Wwz"/>
+                            <constraint firstAttribute="bottom" secondItem="v37-wu-APP" secondAttribute="bottom" id="OGM-Vu-2Ha"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RMU-oY-KjQ" secondAttribute="bottom" id="a8Y-2d-IdH"/>
+                            <constraint firstAttribute="trailing" secondItem="XNI-oj-Oz4" secondAttribute="trailing" id="c7w-lT-F6Q"/>
+                            <constraint firstItem="RMU-oY-KjQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iDB-2p-Pfw"/>
+                            <constraint firstItem="v37-wu-APP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="m5G-K1-UIW"/>
+                            <constraint firstAttribute="trailing" secondItem="RMU-oY-KjQ" secondAttribute="trailing" id="sBH-4J-Ttb"/>
+                            <constraint firstItem="XNI-oj-Oz4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="swL-8x-lIj"/>
+                            <constraint firstAttribute="trailing" secondItem="v37-wu-APP" secondAttribute="trailing" id="xWM-uM-wP8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="footerView" destination="v37-wu-APP" id="Lwa-LI-qtD"/>
+                        <outlet property="headerView" destination="XNI-oj-Oz4" id="gMq-DM-G9x"/>
+                        <outlet property="previewView" destination="RMU-oY-KjQ" id="car-Lf-SSM"/>
+                        <outlet property="startStopButton" destination="umz-aC-W7R" id="j1s-OY-StR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="stopButton" width="45" height="45"/>
+    </resources>
+</document>
